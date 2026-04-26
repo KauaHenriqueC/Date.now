@@ -1,1 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+
+* {     /*General configs*/
+    margin: 0;
+    padding: 0;
+}
+
+body {  /*Body configs*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {    /*Container configs*/
+    height: 50vh;
+    width: 60vw;
+    border-radius: 9%;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    row-gap: 2vh;
+    background-color: red;
+}
