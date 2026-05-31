@@ -34,13 +34,13 @@ body {  /*Background configs*/
 }
 
 .container .hours {     /*Hours div configs*/
-    font-size: 5rem;
+    font-size: clamp(0.1vw, 11vw, 20vw);
 }
 
 .container .weakDay {   /*WeakDay div configs*/
-    font-size: 1.1rem;
+    font-size: clamp(0.1vw, 2.7vw, 20vw);
 }
 
 .container .date {   /*Date div configs*/
-    font-size: 1.1rem;
+    font-size: clamp(0.1vw, 2.7vw, 20vw);
 }
