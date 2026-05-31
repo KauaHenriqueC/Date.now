@@ -13,6 +13,7 @@ body {  /*Body configs*/
 }
 
 body {  /*Background configs*/
+    background-image: url("imgs/Day.png");
     background-size: cover;
     background-repeat: no-repeat;
 }

@@ -1,3 +1,17 @@
+function changeWPP() {  // Function to changes the wpp
+  var back = document.body  // Element body
+  var now = new Date()      // Get computers time
+
+if (now.getHours() >= 6 && now.getHours() <= 11) {  
+    back.style.backgroundImage = "url('imgs/Day.png')"
+  } else if (now.getHours() >= 12 && now.getHours() <= 17) {
+    back.style.backgroundImage = "url('imgs/Afternoon.png')"
+  } else if (now.getHours() >= 18 && now.getHours() <= 20) {
+    back.style.backgroundImage = "url('imgs/Evening.png')"
+  } else {
+    back.style.backgroundImage = "url('imgs/Night.png')"
+  }
+}
 function updateClock() {    // Function to update the clock
   var now = new Date()      // Get computers time
   var hours = document.querySelector('.hours')  // Get element in html
@@ -7,7 +21,7 @@ function updateClock() {    // Function to update the clock
 function updateDay() {
   var now = new Date()      // Get computers time
   var days = document.querySelector('.weakDay') // Get element in html
-
+  
   switch (now.getDay()) { // Switch that shows the day according to the number of the weak
     case 0:
       days.innerText = "Sunday"
@@ -15,13 +29,13 @@ function updateDay() {
     case 1:
       days.innerText = "Monday"
       break
-    case 2:
-      days.innerText = "Tuesday"
+      case 2:
+        days.innerText = "Tuesday"
+        break
+        case 3:
+          days.innerText = "Wednesday"
       break
-    case 3:
-      days.innerText = "Wednesday"
-      break
-    case 4:
+      case 4:
       days.innerText = "Thursday"
       break
     case 5:
@@ -38,10 +52,11 @@ function updateDay() {
 function updateDate() {
   var now = new Date()      // Get computers time
   var date = document.querySelector('.date') // Get element in html
-
+  
   date.innerText = now.toLocaleDateString()
 }
 setInterval(updateClock, 1000)  // Run the function for 1 second
 updateClock() // Shows Hours
 updateDay() // Shows Day
 updateDate() // Shows Date
+changeWPP()
